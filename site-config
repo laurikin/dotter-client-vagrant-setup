@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+    DocumentRoot /vagrant/dotter-capsicum-content/
+    ServerName local.dotter.me
+    <Directory />
+        AllowOverride All
+        Allow from all
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot /vagrant/dotter-jquery-mobile-theme/src/main/webapp/static/
+    Alias "/themes/" "/vagrant/dotter-jquery-mobile-theme/src/main/webapp/static/"
+    ServerName data.dotter.me
+    <Directory />
+        AllowOverride All
+        Allow from all
+    </Directory>
+</VirtualHost>
+
